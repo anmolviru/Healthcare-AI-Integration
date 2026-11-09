@@ -1,45 +1,56 @@
-# Healthcare AI Integration
+# Healthcare AI Integration – Strategic Planning Dashboard
 
-## Project Overview
-Healthcare AI Integration is an educational dashboard prototype designed to support strategic planning and analysis for AI adoption in healthcare.
+An educational dashboard prototype for planning and assessing AI adoption in healthcare.
 
-The project organizes healthcare AI use cases, risk assessments, SWOT analysis, implementation roadmaps, and key performance indicators.
+## Features
+- Healthcare AI use-case inventory
+- Rule-based risk register and priority assessment
+- SWOT analysis
+- Strategic implementation roadmap
+- KPI overview
+- FastAPI backend with sample demonstration data
+- React + Vite frontend
 
-## Objectives
-- Identify AI opportunities in healthcare.
-- Assess implementation risks.
-- Review operational readiness.
-- Support responsible AI adoption.
-- Organize short-term and long-term recommendations.
+## Important disclaimer
+This is an educational planning prototype. It is not a clinical decision-support system and must not be used to diagnose or treat patients. Do not enter real patient data.
 
-## Technology Stack
-- Frontend: React
-- Build Tool: Vite
-- Backend: Python FastAPI
-- Data: Demonstration data
+## Project structure
+```text
+Healthcare_AI_Integration/
+├── backend/
+│   ├── main.py
+│   ├── data.py
+│   └── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       └── style.css
+└── README.md
+```
 
-## Implemented Features
-- Healthcare AI planning dashboard.
-- Use-case inventory.
-- Risk register.
-- SWOT analysis.
-- Strategic roadmap.
-- KPI overview.
-- Rule-based priority assessment.
+## Run the backend
+Open a terminal in the `backend` folder:
+```bash
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+API: http://127.0.0.1:8000  
+API documentation: http://127.0.0.1:8000/docs
 
-## Proposed Features
-- Clinical AI model integration.
-- Electronic Health Record integration.
-- Production authentication and role-based access.
-- Production database and audit logging.
-- Clinical validation and regulatory review.
+## Run the frontend
+Open a second terminal in the `frontend` folder:
+```bash
+npm install
+npm run dev
+```
+Open the local URL shown by Vite (normally http://localhost:5173).
 
-## Important Disclaimer
-This is an educational planning prototype.
-It is not a clinical decision-support system and must not be used to diagnose or treat patients.
-
-No real patient data should be entered.
-
-## Project Status
-Dashboard prototype and planning features are implemented.
-Clinical AI integration and production deployment remain proposed future work.
+The frontend expects the backend at `http://127.0.0.1:8000`.
