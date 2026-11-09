@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const API = https://healthcare-ai-integration.onrender.com;
+const API ="https://healthcare-ai-integration.onrender.com";
 
 function App() {
   const [data, setData] = useState(null);
